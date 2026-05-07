@@ -1,0 +1,130 @@
+.container{
+    display: flex;
+     h1{
+            color:rgb(30, 111, 217) ;
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size:55px;
+            margin: 10vh 5vw;
+        }
+        
+    .content{
+    display: grid;
+    grid-template-columns: auto auto;
+     align-items: center;
+     column-gap: 2vw;
+     row-gap: 40px;
+    height: 90vh;
+    width: 70%;
+    /* background-color: aqua; */
+    overflow-y: auto;
+    width: 100%;
+    /* background-color: aquamarine; */
+        .heading{
+            .search{
+                
+                width: 200%;
+                display: flex;
+                /* justify-content: space-between; */
+                align-items: center;
+                /* background-color: aqua; */
+                input{
+                    height: 35px;
+                    width: 16vw;
+                    overflow-x: hidden;
+                    border: 2px solid rgb(30, 111, 217)  ;   
+                    height: 30px;
+                    text-align: center;
+                    font-family: sans-serif;   
+                    font-size: large;
+                    color: grey;
+                    padding: 1vh 0vw;
+                    /* border: none; */
+                    border-radius: 10px;
+                
+                }
+            }
+            p{
+                font-family: sans-serif;
+                font-size: 18px;
+                margin-left: 5vw;
+                color: rgb(112, 105, 105);
+                /* text-transform: capitalize; */
+                width: 150%;
+                text-align: justify;
+                /* background-color: aqua; */
+            }
+        }
+
+       
+        .cards{
+               margin: 2vh 3vw;
+            .card{
+                /* border: 1px solid black; */
+                height:auto;
+                width: 400px;
+                /* background-color: rgb(240, 236, 236); */
+                box-shadow:inset 1px 1px 10px rgb(194, 187, 187);
+                border-radius: 5px;
+                h2{
+                    text-align: center;
+                    padding: 2vh 1vw;
+                    font-size: 30px;
+                }
+                .image{
+                   height: 200px;
+                   width: 250px;
+                   display: block;
+                   margin: auto;
+                   border-radius: 5px;
+                   
+                  
+                   
+                  img{
+                    height: 100%;
+                    width: 100%;
+                    
+                  }
+                  img:hover{
+                    transform: scale(1.01);
+                    transition: all .5s;
+                     box-shadow: 1px 1px 10px grey;
+                  }
+                }
+                h3{
+                   text-align: center;
+                   padding: 1vh 2vw;
+                   font-size: 25px;
+                }
+                p{
+                   text-align: center;
+                   font-family: sans-serif;
+                   font-size: 19px;
+                   color: rgb(56, 54, 54);
+                   padding: 1vh 2vw;
+                }
+                .pri_rat{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                button{
+                    height: 5vh;
+                    width: 10vw;
+                    font-family: sans-serif;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 3vh 10vw;
+                    background-color: green;
+                    /* margin-top: 15px; */
+                
+                    /* margin-left: 20px; */
+
+                }
+            }
+            /* .card:hover{
+                transform: scale(1.1);
+                transition: all .5s;
+            } */
+        }
+    }
+}

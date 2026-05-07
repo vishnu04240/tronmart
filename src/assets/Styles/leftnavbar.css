@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Lnavbar{
+    top:0;
+    position:sticky;
+    padding: 0;
+      height: 85vh;
+      width: 100%;
+      border-right: 1px solid rgb(165, 172, 165);
+      /* background-color: burlywood;    */
+   
+    .list{
+         h2{
+      color: grey;
+      font-family: sans-serif;
+      font-size: 25px;
+      margin:2vh 5vw;
+    }
+        
+        ul{
+             list-style-type: none;
+             font-family: sans-serif;
+             font-size: 16px;
+             margin-left:7vw;
+             margin-bottom: 1vw;
+            li{
+                 margin-top: 35px;
+                a{
+                     text-decoration: none;
+                     font-family: sans-serif;
+                     font-size: 20px;
+                     color:rgb(78, 78, 78);
+                }
+            }
+        }
+    }
+    .range{
+        h2{
+            margin: 5vh 5vw;
+            color: grey;
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+        p{
+            font-family: sans-serif;
+                font-size: 15px;
+                margin-left: 7.5vw;
+                margin-top: 1vh;
+                color: rgb(112, 105, 105);
+                
+                width: 150%;
+                text-align: justify;
+               
+        }
+        input{
+            margin:1vh 7vw;
+        }
+    }
+}

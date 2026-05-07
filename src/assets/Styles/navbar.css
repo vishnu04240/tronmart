@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    height: 20vh;
+    width: 100%;
+    /* background-color: brown; */
+    .portion1{
+ height: 60%;
+ width: 100%;
+ background-color: rgb(30, 111, 217);
+
+}
+.portion1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.1px solid rgb(39, 35, 35);
+      .contact{
+        p{
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+      }
+    /* form{
+        input{
+            height: 30px;
+            width:20vw;
+            text-align: center;
+            font-family: sans-serif;   
+            font-size: large;
+            border: none;
+            border-radius: 10px;
+        }
+    } */
+}
+.portion2{
+ height: 40%;
+ width: 100%;
+ background-color:  rgb(30, 111, 217);
+ ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    li{
+        list-style-type: none;
+        a{
+            text-decoration: none;
+            font-family: sans-serif;
+            color: white;
+            font-size: large;
+            font-weight:600;
+        }
+    }
+ }
+ select{
+    padding: 1vh 0vw;
+    background-color: rgb(30, 111, 217);
+    border: none;
+     font-family: sans-serif;
+            color: white;
+            font-size: large;
+            font-weight:600;
+ }
+}
+
+}
