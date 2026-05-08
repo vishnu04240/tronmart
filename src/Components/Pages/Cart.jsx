@@ -1,41 +1,33 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import '../../assets/Styles/cart.css'
+
 const Cart = () => {
-  let [products, setProducts] = useState([])
-  let fetchApi = async () => {
-    let resp = await fetch(`http://localhost:4000/cartitems`)
-    let apidata = await resp.json()
-    setProducts(apidata)
-  }
-  useEffect(() => {
-    fetchApi()
-  }, [])
-  //  console.log(products)
-  let handleRemove = async (id) => {
-    await axios.delete(`http://localhost:4000/cartitems/${id}`)
-    setProducts(products.filter(item => item.id !== id))
-  }
 
-  let[count,setCount]=useState(1);
+  // ✅ Read cart from localStorage
+  let [products, setProducts] = useState(
+    JSON.parse(localStorage.getItem('cart')) || []
+  )
 
-  let addcount = () =>{
-    setCount(count+1)
-  }
-  let subcount = () => {
-    setCount(count-1)
+  let [count, setCount] = useState(1)
+
+  // ✅ Remove from localStorage + state
+  let handleRemove = (id) => {
+    let updated = products.filter(item => item.id !== id)
+    setProducts(updated)
+    localStorage.setItem('cart', JSON.stringify(updated))
   }
 
-
+  let addcount = () => { setCount(count + 1) }
+  let subcount = () => { if (count > 1) setCount(count - 1) }
 
   return (
     <>
       <div className="carts">
         {products.length > 0 ? (
-          products && products.map((elem, index) => {
+          products.map((elem, index) => {
             let { id, image, description, name, price } = elem
             return (
-              <div className="box">
+              <div className="box" key={id}>
                 <div className="img">
                   <img src={image} alt={name} width="80" />
                 </div>
@@ -48,16 +40,15 @@ const Cart = () => {
                     <button onClick={() => handleRemove(id)}>
                       Remove
                     </button>
-
                     <div className="counts">
                       <div className="add">
-                          <button onClick={addcount}>+</button>
+                        <button onClick={addcount}>+</button>
                       </div>
                       <div className="num">
-                          {count}
+                        {count}
                       </div>
                       <div className="sub">
-                          <button onClick={subcount}>-</button>
+                        <button onClick={subcount}>-</button>
                       </div>
                     </div>
                   </div>
@@ -68,18 +59,12 @@ const Cart = () => {
               </div>
             )
           })
-        ) :
-          <p> Your Cart Is Empty</p>
-        }
-
+        ) : (
+          <p>Your Cart Is Empty</p>
+        )}
       </div>
-
-
-
     </>
   )
-
 }
-
 
 export default Cart
